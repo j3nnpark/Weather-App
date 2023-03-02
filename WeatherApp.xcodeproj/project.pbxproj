@@ -17,6 +17,7 @@
 		180D1E8C29ADB0940058ABD5 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1E8B29ADB0940058ABD5 /* CurrentWeatherView.swift */; };
 		180D1E8F29ADB6210058ABD5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1E8E29ADB6210058ABD5 /* WeatherModel.swift */; };
 		180D1E9129ADF25C0058ABD5 /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1E9029ADF25C0058ABD5 /* WeatherAPIClient.swift */; };
+		180D1E9429AF30370058ABD5 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1E9329AF30370058ABD5 /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		180D1E8B29ADB0940058ABD5 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
 		180D1E8E29ADB6210058ABD5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		180D1E9029ADF25C0058ABD5 /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
+		180D1E9329AF30370058ABD5 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +156,9 @@
 		180D1E8A29ADB0610058ABD5 /* WeatherAPIClient */ = {
 			isa = PBXGroup;
 			children = (
-				180D1E9029ADF25C0058ABD5 /* WeatherAPIClient.swift */,
 				180D1E8D29ADB60E0058ABD5 /* Models */,
+				180D1E9229AF30060058ABD5 /* ViewModels */,
+				180D1E9029ADF25C0058ABD5 /* WeatherAPIClient.swift */,
 			);
 			path = WeatherAPIClient;
 			sourceTree = "<group>";
@@ -166,6 +169,14 @@
 				180D1E8E29ADB6210058ABD5 /* WeatherModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		180D1E9229AF30060058ABD5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				180D1E9329AF30370058ABD5 /* LocationDataManager.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 				180D1E6129ADB0080058ABD5 /* ContentView.swift in Sources */,
 				180D1E8F29ADB6210058ABD5 /* WeatherModel.swift in Sources */,
 				180D1E5F29ADB0080058ABD5 /* WeatherAppApp.swift in Sources */,
+				180D1E9429AF30370058ABD5 /* LocationDataManager.swift in Sources */,
 				180D1E9129ADF25C0058ABD5 /* WeatherAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +476,7 @@
 				DEVELOPMENT_TEAM = J974Q8F672;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs to access your location data to get weather information";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,6 +506,7 @@
 				DEVELOPMENT_TEAM = J974Q8F672;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs to access your location data to get weather information";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
