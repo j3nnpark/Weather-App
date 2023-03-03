@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CurrentWeatherView: View {
+    @StateObject private var weatherAPIClient = WeatherAPIClient()
+    
     var body: some View {
         VStack(alignment: .center) {
             HStack {
                 Text("Weather Icon")
-                Text("Temperature")
+                Text("\(weatherAPIClient.weatherTemp)")
             }
-            Text("Weather description")
+            Text("\(weatherAPIClient.weatherDescription)")
         }
     }
 }
