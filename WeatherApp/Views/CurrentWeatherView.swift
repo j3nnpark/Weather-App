@@ -14,9 +14,16 @@ struct CurrentWeatherView: View {
         VStack(alignment: .center) {
             HStack {
                 weatherAPIClient.weatherCodeIcon
-                Text("\(weatherAPIClient.weather.temperature, specifier: "%.2f")")
+                HStack {
+                    Text("\(weatherAPIClient.weather.temperature, specifier: "%.2f")")
+                        .font(.system(size: 50, weight: .bold, design: .default))
+                    Text("ºC")
+                        .font(.system(size: 43, weight: .semibold, design: .default))
+                }
+                .padding()
             }
             Text("\(weatherAPIClient.weatherDescription)")
+                .font(.system(size: 20, weight: .medium, design: .rounded))
         }
     }
 }
