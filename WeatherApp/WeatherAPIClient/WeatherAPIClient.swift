@@ -7,12 +7,15 @@
 
 import Foundation
 import CoreLocation
+import SwiftUI
 
 class WeatherAPIClient: NSObject, ObservableObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     @Published var authorizationStatus: CLAuthorizationStatus?
     @Published var weatherTemp: Double = 0
     @Published var weatherDescription: String = ""
+    @Published var weather = Weather(temperature: 0, weatherCode: WeatherCode.unknown)
+    @Published var weatherCodeIcon: Image = Image(systemName: "timer")
     private var url: URL?
     
     override init() {
@@ -24,8 +27,10 @@ class WeatherAPIClient: NSObject, ObservableObject, CLLocationManagerDelegate {
         do {
             let (data, _) = try await URLSession.shared.data(from: url!)
             let weatherResponse = try! JSONDecoder().decode(WeatherModel.self, from: data)
-            weatherTemp = weatherResponse.data.values.temperature
-            weatherDescription = WeatherCode(rawValue: weatherResponse.data.values.weatherCode)?.description ?? "Unknown"
+            weather = Weather(temperature: (weatherResponse.data.values.temperature).truncate(to: 2),
+                              weatherCode: WeatherCode(rawValue: weatherResponse.data.values.weatherCode) ?? WeatherCode.unknown)
+            weatherDescription = weather.weatherCode.description
+            weatherCodeIcon = weather.weatherCode.icon
         } catch {
             print("[WeatherAPIClient] Error while fetching the weather for given location")
         }

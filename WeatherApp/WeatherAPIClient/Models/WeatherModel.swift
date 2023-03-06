@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct WeatherModel: Codable {
     let data: WeatherData
@@ -90,5 +91,12 @@ enum WeatherCode: Int {
         }
     }
     
-    var image: 
+    var icon: Image {
+        switch self {
+        case .clear:
+            return Image("10000_clear_large")
+        default:
+            return Image(systemName: "exclamationmark.triangle")
+        }
+    }
 }
