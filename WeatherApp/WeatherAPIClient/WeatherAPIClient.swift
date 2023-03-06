@@ -12,9 +12,8 @@ import SwiftUI
 class WeatherAPIClient: NSObject, ObservableObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     @Published var authorizationStatus: CLAuthorizationStatus?
-    @Published var weatherTemp: Double = 0
-    @Published var weatherDescription: String = ""
     @Published var weather = Weather(temperature: 0, weatherCode: WeatherCode.unknown)
+    @Published var weatherDescription: String = "Description"
     @Published var weatherCodeIcon: Image = Image(systemName: "timer")
     private var url: URL?
     
