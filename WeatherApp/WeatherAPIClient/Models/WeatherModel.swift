@@ -95,6 +95,50 @@ enum WeatherCode: Int {
         switch self {
         case .clear:
             return Image("10000_clear_large")
+        case .mostlyClear:
+            return Image("11000_mostly_clear_large")
+        case .partlyCloudy:
+            return Image("11010_partly_cloudy_large")
+        case .mostlyCloudy:
+            return Image("11021_mostly_cloudy_large")
+        case .cloudy:
+            return Image("10010_cloudy_large")
+        case .fog:
+            return Image("20000_fog_large")
+        case .lightFog:
+            return Image("21000_fog_light_large")
+        case .drizzle:
+            return Image("40000_drizzle_large")
+        case .lightRain:
+            return Image("42000_rain_light_large")
+        case .rain:
+            return Image("40010_rain_large")
+        case .heavyRain:
+            return Image("42010_rain_heavy_large")
+        case .snow:
+            return Image("50000_snow_large")
+        case .lightSnow:
+            return Image("51000_snow_light_large")
+        case .flurries:
+            return Image("50010_flurries_large")
+        case .heavySnow:
+            return Image("51010_snow_heavy_large")
+        case .freezingDrizzle:
+            return Image("60000_freezing_rain_drizzle_large")
+        case .freezingRain:
+            return Image("60010_freezing_rain_large")
+        case .lightFreezingRain:
+            return Image("62000_freezing_rain_light_large")
+        case .heavyFreezingRain:
+            return Image("62010_freezing_rain_heavy_large")
+        case .icePellets:
+            return Image("70000_ice_pellets_large")
+        case .lightIcePellets:
+            return Image("71020_ice_pellets_light_large")
+        case .heavyIcePellets:
+            return Image("71010_ice_pellets_heavy_large")
+        case .thunderstorm:
+            return Image("80000_tstorm_large")
         default:
             return Image(systemName: "exclamationmark.triangle")
         }
