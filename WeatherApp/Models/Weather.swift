@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct Weather {
+    let temperature: Double
+    let weatherCode: WeatherCode
+}
