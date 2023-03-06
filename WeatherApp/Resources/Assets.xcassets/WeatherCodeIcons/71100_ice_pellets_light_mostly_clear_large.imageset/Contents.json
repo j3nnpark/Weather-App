@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "71100_ice_pellets_light_mostly_clear_large.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "71100_ice_pellets_light_mostly_clear_large@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

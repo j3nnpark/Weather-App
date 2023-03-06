@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "51040_snow_light_mostly_cloudy_large.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "51040_snow_light_mostly_cloudy_large@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
