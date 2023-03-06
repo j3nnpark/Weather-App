@@ -13,8 +13,8 @@ struct CurrentWeatherView: View {
     var body: some View {
         VStack(alignment: .center) {
             HStack {
-                Text("Weather Icon")
-                Text("\(weatherAPIClient.weatherTemp)")
+                weatherAPIClient.weatherCodeIcon
+                Text("\(weatherAPIClient.weather.temperature, specifier: "%.2f")")
             }
             Text("\(weatherAPIClient.weatherDescription)")
         }
